@@ -18,6 +18,10 @@ namespace Section_3_Lesson_2.Controllers
             _logger = logger;
         }
 
+        // https://localhost:7133/WeatherForecast/GetWeatherForecast | did not work
+        // https://localhost:7133/WeatherForecast                    | works for Get()
+        // Check up on the explanation from Section 3, Lesson 2, as did not work as explained.
+
         [HttpGet(Name = "GetWeatherForecast")]
         public IEnumerable<WeatherForecast> Get()
         {
