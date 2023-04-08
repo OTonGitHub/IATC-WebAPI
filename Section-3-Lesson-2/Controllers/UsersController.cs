@@ -25,7 +25,10 @@ public class UsersController : ControllerBase // file was plural, but class name
     [HttpGet]
     public IEnumerable<string> Get()
     {
-        return users;
+        //int rangeEnd = Random.Shared.Next(0, users.Count());
+        // return users.GetRange(0, rangeEnd > 0 ? rangeEnd : 1);
+        return users.GetRange(0, rangeEnd > 0 ? rangeEnd : 1);
+
     }
 
     // GET: api/users<controller>/1
