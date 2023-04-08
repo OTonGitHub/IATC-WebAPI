@@ -5,6 +5,7 @@ using System.Net;
 // switched to file-scoped name space, instead of encapsulating all in brace
 namespace Section_3_Lesson_2.Controllers;
 
+// RESTful way is to call controller name with verb
 [Route("api/[controller]")]
 [ApiController]
 public class UsersController : ControllerBase // file was plural, but class name set singular, why?
@@ -17,6 +18,8 @@ public class UsersController : ControllerBase // file was plural, but class name
         "Alex",
         "Sue"
     };
+
+    // The {id} in the annotation binds to the variable in function parameter
 
     // GET: api/users<controller>
     [HttpGet]
@@ -73,5 +76,16 @@ public class UsersController : ControllerBase // file was plural, but class name
         catch {
             return HttpStatusCode.InternalServerError;
         }
+    }
+
+    // PATCH: api/users<controller>/1
+    // Update part of a record
+    /* It's Possible to have multiple Patch for each Parameter
+        eg: api/users/email/1, api/users/phone/1 */
+    [HttpPatch("{id}")]
+    public void Patch(int id, [FromBody] string emailAddress)
+    {
+        // PUT updates whole record,
+        // PATCH updates part of a record
     }
 }
