@@ -11,7 +11,7 @@ namespace Section_3_Lesson_2.Controllers;
 public class UsersController : ControllerBase // file was plural, but class name set singular, why?
 {
     // more on readonly collections: https://www.youtube.com/watch?v=7hBPI0xYezo
-    private readonly static List<string> users = new() // no paranthesis ? if List<string>()
+    private readonly static List<string> Users = new() // no paranthesis ? if List<string>()
     {
         "Ali",
         "Aisha",
@@ -20,14 +20,13 @@ public class UsersController : ControllerBase // file was plural, but class name
     };
 
     // The {id} in the annotation binds to the variable in function parameter
-
     // GET: api/users<controller>
     [HttpGet]
     public IEnumerable<string> Get()
     {
-        //int rangeEnd = Random.Shared.Next(0, users.Count());
-        // return users.GetRange(0, rangeEnd > 0 ? rangeEnd : 1);
-        return users.GetRange(0, 1);
+        // GerRange: from Index, Items Including Index
+        // ..Next(): minimum include, max exclude
+        return Users.GetRange(0, Random.Shared.Next(1, 5));
     }
 
     // GET: api/users<controller>/1
@@ -36,7 +35,7 @@ public class UsersController : ControllerBase // file was plural, but class name
     {
         try
         {
-            return users[id];
+            return Users[id];
         }
         catch (Exception ex)
         {
@@ -49,7 +48,7 @@ public class UsersController : ControllerBase // file was plural, but class name
     [HttpPost]
     public void Post([FromBody] string value)
     {
-        users.Add(value);
+        Users.Add(value);
     }
 
     // DELETE: api/users<controller>/1
@@ -58,7 +57,7 @@ public class UsersController : ControllerBase // file was plural, but class name
     {
         try
         {
-            users.RemoveAt(id);
+            Users.RemoveAt(id);
             return HttpStatusCode.OK;
         }
         catch {
@@ -72,7 +71,7 @@ public class UsersController : ControllerBase // file was plural, but class name
     {
         try
         {
-            users[id] = value;
+            Users[id] = value;
             return HttpStatusCode.OK;
         }
         catch {
