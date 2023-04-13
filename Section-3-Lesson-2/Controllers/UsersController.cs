@@ -39,7 +39,7 @@ public class UsersController : ControllerBase // file was plural, but class name
         }
         catch (Exception ex)
         {
-            return ex.Message;
+            return $"Requested ID: {id}, but returns Error: {ex.Message}";
         }
 
     }
