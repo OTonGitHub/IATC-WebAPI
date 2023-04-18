@@ -7,6 +7,8 @@ builder.Services.AddControllers(); // AddControllerWithView is For MVC
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// authorization can be put here
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
