@@ -47,7 +47,7 @@ public class UsersController : ControllerBase // file was plural, but class name
     // POST: api/users<controller>/value
     [HttpPost]
     public void Post([FromBody] string value)
-    {
+    { // Remove once hit, new VS feature
         Users.Add(value);
     }
 
