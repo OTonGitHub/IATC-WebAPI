@@ -2,6 +2,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddRazorPages();
+// services.AddRazorPages(c=>c.RootDirectory = "/PagesRootDir"); // ToSet Dir other than /Pages
 builder.Services.AddControllers(); // controller with view, is MVC
 builder.Services.AddEndpointsApiExplorer(); // not swagger dependent
 builder.Services.AddSwaggerGen();
