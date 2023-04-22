@@ -11,4 +11,4 @@
         - Azure Active Directory BSC
     - Windows Authentication:
         - using windows accounts or AD (including Azure)
-    -Auth0
+    - Auth0
