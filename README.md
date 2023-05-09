@@ -21,7 +21,7 @@
     - Windows Authentication:
         - using windows accounts or AD (including Azure)
     - Auth0
-- <h4>Storing Secrets</h4>
+- <h3>Storing Secrets</h3>
     - right click project secret.json (depends IDE)
 - If single HttpGet Action, and name not specified, will auto direct for class.
 - If multiple HttpGet with no name in same class, will cause ambigious name.
