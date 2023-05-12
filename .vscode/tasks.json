@@ -7,7 +7,7 @@
             "type": "process",
             "args": [
                 "build",
-                "${workspaceFolder}/Section-3-Lesson-2/Section-3-Lesson-2.csproj",
+                "${workspaceFolder}/Section-5-Lesson-2/Section-5-Lesson-2.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -19,7 +19,7 @@
             "type": "process",
             "args": [
                 "publish",
-                "${workspaceFolder}/Section-3-Lesson-2/Section-3-Lesson-2.csproj",
+                "${workspaceFolder}/Section-5-Lesson-2/Section-5-Lesson-2.csproj",
                 "/property:GenerateFullPaths=true",
                 "/consoleloggerparameters:NoSummary"
             ],
@@ -33,7 +33,7 @@
                 "watch",
                 "run",
                 "--project",
-                "${workspaceFolder}/Section-3-Lesson-2/Section-3-Lesson-2.csproj"
+                "${workspaceFolder}/Section-5-Lesson-2/Section-5-Lesson-2.csproj"
             ],
             "problemMatcher": "$msCompile"
         }
