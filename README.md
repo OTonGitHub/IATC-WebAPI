@@ -25,6 +25,8 @@
     - right click project secrets.json (depends IDE)
 - If single HttpGet Action, and name not specified, will auto direct for class.
 - If multiple HttpGet with no name in same class, will cause ambigious name.
+- <HttpsRedirection> can be added to appsettings, if want to redirect, and along with app.UseHttpsRedirection in configure middleware for more control
+
 # Managing Secrets
 - For local development, storing connections strings,
 - in Rider:
@@ -33,6 +35,3 @@
     - right click > manage user secrets
 - C:\Users\OT\AppData\Roaming\Microsoft\UserSecrets
 - \32b634af-3239-497e-9b34-4d017d575078\secrets.json
-
-
-
