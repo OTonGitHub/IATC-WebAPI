@@ -35,3 +35,11 @@
     - right click > manage user secrets
 - C:\Users\OT\AppData\Roaming\Microsoft\UserSecrets
 - \32b634af-3239-497e-9b34-4d017d575078\secrets.json
+- <strong>Using <em>dotnet user-secrets</em></strong>
+    - dotnet user-secrets -?
+    - specific to project, but stored in a protected location for any project in system to access
+
+# Commands
+- <strong><em>dotnet user-secrets set "first" "last" -p Section-5-Lesson-2 -v</em></strong>
+- Project file path C:\Users\pironadmin\Desktop\Projects\OTonGitHub\IATC-WebAPI\Section-5-Lesson-2\Section-5-Lesson-2.csproj.
+- Secrets file path C:\Users\pironadmin\AppData\Roaming\Microsoft\UserSecrets\32b634af-3239-497e-9b34-4d017d577777\secrets.json.
