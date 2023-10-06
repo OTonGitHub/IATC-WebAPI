@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section-3-Lesson-8", "Secti
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Section-5-Lesson-2", "Section-5-Lesson-2\Section-5-Lesson-2.csproj", "{8C68049B-91CD-47C0-812D-66322C9D78B2}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "S5L2-Sandbox", "S5L2-Sandbox\S5L2-Sandbox.csproj", "{C56B52A8-44B1-4A9C-A0BC-95105AD2C6BD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{8C68049B-91CD-47C0-812D-66322C9D78B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8C68049B-91CD-47C0-812D-66322C9D78B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8C68049B-91CD-47C0-812D-66322C9D78B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C56B52A8-44B1-4A9C-A0BC-95105AD2C6BD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C56B52A8-44B1-4A9C-A0BC-95105AD2C6BD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C56B52A8-44B1-4A9C-A0BC-95105AD2C6BD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C56B52A8-44B1-4A9C-A0BC-95105AD2C6BD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
