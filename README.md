@@ -18,7 +18,7 @@
 
 - again, see how `.\` was omitted as we are in the same directory, this is different in windows.
 
-> `dotnet run --project S5L2-Sandbox --launch-profile "https"
+> `dotnet run --project S5L2-Sandbox --launch-profile "https"`
 
 - the command already looks for .csproj file, so just passing the directory here is fine.
 
