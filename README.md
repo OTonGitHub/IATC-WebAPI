@@ -60,7 +60,7 @@ export function getSecretsPath(id: string) {
 
   > _~/Appdata/Roaming/Microsoft/UserSecrets/{GUID}/secrets.json_
 
-  &emsp;**LinuxOrMac** :
+  &emsp;**Linux | Mac** :
 
   > _~/.microsoft/usersecrets/{GUID}/secrets.json_
 
