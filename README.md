@@ -4,14 +4,14 @@
 - Check commits for progress throughout the course, and/or notes. </br>
 - Built on Rider & VS
 
-# For MAC
+# Mac & Linux Dev Environment
 
 ## Commands
 
 > `dotnet new webapi -lang "c#" -n "S5L2-Sandbox" -f "net7.0" -o S5L2-Sandbox -d -v diag`
 
 - Note here, `.\` was not used when sepcifying output directory, usually, just -n is enough,
-  it will automatically create directory, use -n Only if you want folder name to be different,
+  it will automatically create directory, use -o if you want folder name to be different,
   or when grouping projects under specific folders.
 
 > `dotnet sln add S5L2-Sandbox/S5L2-Sandbox.csproj`
@@ -24,7 +24,7 @@
 
 ## Manage user Secrets
 
-- IConfiguration gets injected during WebApplication.CreateBuilder();
+- IConfiguration gets injected during `WebApplication.CreateBuilder();`
   IConfiguration itself not only reads from appsettings.json but other places too.
   such as:
   - Environment Variables
@@ -35,7 +35,7 @@
   - User Secrets & Custom .JSON files (you can add files in IConfigurationBuilder)
 - It seems changes to the appsettings.json file are reflected instantly in the app, might even auto restart web server gracefully
 - There already is an extension that allows managing user secrets in VSCode,
-  Code is taken from here
+  code is taken from here
   > https://github.com/AdrianWilczynski/UserSecrets/blob/master/src/secretsJson.ts#L5
 
 ```
@@ -53,11 +53,10 @@ export function getSecretsPath(id: string) {
 ```
 
 - On a mac, it falls under second option, darwin, same as linux. There seems to be no active development on the extension, so for now
-  it is avoided.
+  it is avoided. But we will use the information on it, as it seems to be working.
 - Looking at the code above, the location for the secrets.json is protected under the user account, so
-
-  > _Windows_ : ~/Appdata/Roaming/Microsoft/UserSecrets/{GUID}/secrets.json
-  > _LinuxOrMac_ : ~/.microsoft/usersecrets/{GUID}/secrets.json
+  &emsp;**Windows** : _~/Appdata/Roaming/Microsoft/UserSecrets/{GUID}/secrets.json_
+  &emsp;**LinuxOrMac** : _~/.microsoft/usersecrets/{GUID}/secrets.json_
 
 - In order to user Secrets.json, the following commands are used:
   > `dotnet user-secrets init`
