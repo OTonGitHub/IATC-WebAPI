@@ -35,7 +35,8 @@
   - User Secrets & Custom .JSON files (you can add files in IConfigurationBuilder)
 - It seems changes to the appsettings.json file are reflected instantly in the app, might even auto restart web server gracefully
 - There already is an extension that allows managing user secrets in VSCode,
-  Code is taken from here > https://github.com/AdrianWilczynski/UserSecrets/blob/master/src/secretsJson.ts#L5
+  Code is taken from here
+  > https://github.com/AdrianWilczynski/UserSecrets/blob/master/src/secretsJson.ts#L5
 
 ```
 export function getSecretsPath(id: string) {
@@ -54,8 +55,9 @@ export function getSecretsPath(id: string) {
 - On a mac, it falls under second option, darwin, same as linux. There seems to be no active development on the extension, so for now
   it is avoided.
 - Looking at the code above, the location for the secrets.json is protected under the user account, so
-  _Windows_ > ~/Appdata/Roaming/Microsoft/UserSecrets/{GUID}/secrets.json
-  _LinuxOrMac_ > ~/.microsoft/usersecrets/{GUID}/secrets.json
+
+  > _Windows_ : ~/Appdata/Roaming/Microsoft/UserSecrets/{GUID}/secrets.json
+  > _LinuxOrMac_ : ~/.microsoft/usersecrets/{GUID}/secrets.json
 
 - In order to user Secrets.json, the following commands are used:
   > `dotnet user-secrets init`
