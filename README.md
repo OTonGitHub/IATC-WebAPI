@@ -55,8 +55,13 @@ export function getSecretsPath(id: string) {
 - On a mac, it falls under second option, darwin, same as linux. There seems to be no active development on the extension, so for now
   it is avoided. But we will use the information on it, as it seems to be working.
 - Looking at the code above, the location for the secrets.json is protected under the user account, so
-  &emsp;**Windows** : _~/Appdata/Roaming/Microsoft/UserSecrets/{GUID}/secrets.json_
-  &emsp;**LinuxOrMac** : _~/.microsoft/usersecrets/{GUID}/secrets.json_
+  &emsp;**Windows** :
+
+  > _~/Appdata/Roaming/Microsoft/UserSecrets/{GUID}/secrets.json_
+
+  &emsp;**LinuxOrMac** :
+
+  > _~/.microsoft/usersecrets/{GUID}/secrets.json_
 
 - In order to user Secrets.json, the following commands are used:
   > `dotnet user-secrets init`
