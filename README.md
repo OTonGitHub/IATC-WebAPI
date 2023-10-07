@@ -22,6 +22,48 @@
 
 - the command already looks for .csproj file, so just passing the directory here is fine.
 
+## Manage user Secrets
+
+- IConfiguration gets injected during WebApplication.CreateBuilder();
+  IConfiguration itself not only reads from appsettings.json but other places too.
+  such as:
+  - Environment Variables
+  - Command Line Arguments
+  - User Secrets
+  - Azure Key Vault
+  - 3rd Party Providers and Databases
+  - User Secrets & Custom .JSON files (you can add files in IConfigurationBuilder)
+- It seems changes to the appsettings.json file are reflected instantly in the app, might even auto restart web server gracefully
+- There already is an extension that allows managing user secrets in VSCode,
+  Code is taken from here > https://github.com/AdrianWilczynski/UserSecrets/blob/master/src/secretsJson.ts#L5
+
+```
+export function getSecretsPath(id: string) {
+    const platform = os.platform();
+
+    if (platform === 'win32') {
+        return path.join(os.homedir(), 'AppData', 'Roaming', 'Microsoft', 'UserSecrets', id, 'secrets.json');
+    } else if (platform === 'linux' || platform === 'darwin') {
+        return path.join(os.homedir(), '.microsoft', 'usersecrets', id, 'secrets.json');
+    } else {
+        return;
+    }
+}
+```
+
+- On a mac, it falls under second option, darwin, same as linux. There seems to be no active development on the extension, so for now
+  it is avoided.
+- Looking at the code above, the location for the secrets.json is protected under the user account, so
+  _Windows_ > ~/Appdata/Roaming/Microsoft/UserSecrets/{GUID}/secrets.json
+  _LinuxOrMac_ > ~/.microsoft/usersecrets/{GUID}/secrets.json
+
+- In order to user Secrets.json, the following commands are used:
+  > `dotnet user-secrets init`
+  - This will add the guid to the specific projects csproj file, so you need to be in a project directory
+    alrady when running the command or if in solution just pass `--project` flag with directory with a .csproj file.
+  - However a file is not yet created, so you need to set example value to create the file and open it in vscode.
+    > `dotnet user-secrets set "initSecret" "0"`
+
 # Projects
 
 - Section-3-Lesson-2:
